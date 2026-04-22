@@ -3,7 +3,6 @@
     <div class="brand-block">
       <div class="brand-copy">
         <strong>Projeto Vue</strong>
-        <span>Tarefa 7</span>
       </div>
     </div>
 
@@ -14,7 +13,6 @@
       :aria-expanded="menuOpen"
       aria-label="Abrir ou fechar menu"
     >
-      <span></span>
       <span></span>
       <span></span>
     </button>
@@ -42,28 +40,30 @@ const menuOpen = ref(false)
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  padding: 0.9rem 1.1rem;
-  border-bottom: 1px solid var(--ui-border);
-  background: color-mix(in oklab, var(--paper) 90%, white 10%);
-  backdrop-filter: blur(18px);
+  padding: 1rem 1.25rem 1rem 0;
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 250, 241, 0.82);
+  backdrop-filter: blur(12px);
 }
 
 .brand-block {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.9rem;
+  padding-left: 1.15rem;
+  border-left: 7px solid var(--accent);
 }
 
 .brand-mark {
-  width: 2.7rem;
-  height: 2.7rem;
+  width: 2.8rem;
+  height: 2.8rem;
   display: grid;
   place-items: center;
-  border-radius: 0.85rem;
-  background: linear-gradient(135deg, var(--brand-orange), var(--brand-red));
-  color: #fff;
-  font-weight: 800;
-  letter-spacing: 0.08em;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #fffaf1;
+  font-weight: 700;
+  letter-spacing: 0.04em;
 }
 
 .brand-copy strong,
@@ -71,46 +71,53 @@ const menuOpen = ref(false)
   display: block;
 }
 
+.brand-copy strong {
+  color: var(--ink);
+  letter-spacing: 0.03em;
+}
+
 .brand-copy span {
   color: var(--ink-soft);
   font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 
 .site-nav {
   display: flex;
   align-items: center;
-  gap: 0.6rem;
+  gap: 0.45rem;
+  padding-right: 1.15rem;
 }
 
 .nav-link {
   text-decoration: none;
-  color: var(--ink-soft);
-  border: 1px solid transparent;
-  border-radius: 999px;
-  padding: 0.65rem 0.95rem;
+  color: var(--ink);
+  border-bottom: 2px solid transparent;
+  padding: 0.35rem 0.1rem;
+  font-size: 0.95rem;
   transition: 180ms ease;
 }
 
 .nav-link:hover,
 .nav-link.active {
-  color: var(--ink);
-  border-color: var(--ui-border);
-  background: color-mix(in oklab, var(--brand-sand) 22%, white 78%);
+  color: var(--accent);
+  border-color: var(--accent);
 }
 
 .menu-button {
   display: none;
   width: 2.8rem;
   height: 2.8rem;
-  border: 1px solid var(--ui-border);
-  border-radius: 0.75rem;
-  background: color-mix(in oklab, var(--paper) 82%, white 18%);
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: rgba(255, 250, 241, 0.96);
   cursor: pointer;
 }
 
 .menu-button span {
   display: block;
-  width: 1.1rem;
+  width: 1rem;
   height: 2px;
   margin: 0.23rem auto;
   border-radius: 999px;
@@ -141,6 +148,8 @@ const menuOpen = ref(false)
   .nav-link {
     width: 100%;
     text-align: center;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--line);
   }
 }
 </style>

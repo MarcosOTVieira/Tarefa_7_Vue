@@ -1,14 +1,12 @@
 <template>
   <footer class="site-footer">
-    <div>
-      <strong>Tarefa 7 Vue / Angular</strong>
+    <div class="footer-brand">
+      <strong>Tarefa 7 Vue</strong>
     </div>
 
-    <ul>
-      <li>Marcos Vieira</li>
-      <li>Victor Rosseto</li>
-      <li>Guilherme Goncalves</li>
-    </ul>
+    <div class="footer-meta">
+      <p>Marcos Vieira · Victor Rosseto · Guilherme Goncalves</p>
+    </div>
 
     <span>UniFacens {{ currentYear }}</span>
   </footer>
@@ -24,33 +22,39 @@ const currentYear = new Date().getFullYear()
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  padding: 1rem 1.1rem;
-  border-top: 1px solid var(--ui-border);
-  background: color-mix(in oklab, var(--paper) 88%, white 12%);
+  padding: 1rem 1.15rem;
+  border-top: 1px solid var(--line);
+  background: rgba(255, 250, 241, 0.9);
 }
 
-.site-footer strong {
+.footer-brand {
+  display: grid;
+  gap: 0.1rem;
+}
+
+.footer-brand strong {
   color: var(--ink);
+  letter-spacing: 0.03em;
 }
 
-.site-footer p {
-  margin: 0.3rem 0 0;
+.footer-brand span,
+.footer-meta p,
+.site-footer span {
   color: var(--ink-soft);
 }
 
-.site-footer ul {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.45rem 0.9rem;
+.footer-brand span {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.72rem;
+}
+
+.footer-meta p {
   margin: 0;
-  padding: 0;
-  color: var(--ink-soft);
+  text-align: center;
 }
 
 .site-footer span {
-  color: var(--ink-soft);
   white-space: nowrap;
 }
 

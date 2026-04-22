@@ -24,6 +24,6 @@ import AppHeader from './components/AppHeader.vue'
 }
 
 .shell-main {
-  padding-bottom: 2rem;
+  padding-bottom: 0.5rem;
 }
 </style>
